@@ -1,4 +1,4 @@
-{%- comment -%}
+<!-- {%- comment -%}
   Include vars:
 	title
   subtitle
@@ -12,9 +12,9 @@
 {%- assign _slug = include.title | strip_html | slugify | default: 'untitled' -%}
 
 {%- if include.photo and include.photo-alt -%}
-	{%- capture _photo -%}
+	{%- capture _photo -%} -->
 		<img src="{{- include.photo | relative_url -}}" alt="{{- include.photo-alt -}}" class="back">
-	{%- endcapture -%}
+	<!--{%- endcapture -%}
 	{%- assign _class = 'shade-one cover dark' -%}
 {%- else -%}
 	{%- assign _photo = '' -%}
@@ -24,14 +24,14 @@
 {%- if include.auto-header == 'none' -%}
 	{%- assign _heading = "" -%}
 {%- else -%}
-	{%- capture _heading -%}
+	{%- capture _heading -%}-->
 		<header>
 			<h2>
-        {%- if include.auto-header == null or include.auto-header == 'use-title' -%}
+        <!--{%- if include.auto-header == null or include.auto-header == 'use-title' -%}
           {{- _title -}}
         {%- else -%}
           {{- include.auto-header -}}
-        {%- endif -%}
+        {%- endif -%}-->
       </h2>
       {%- if include.subtitle -%}<p>{{- include.subtitle -}}</p>{%- endif -%}
 		</header>
