@@ -10,12 +10,12 @@
             <span class="icon fa-home">My Great Blog</span>
           </a></li>
 
-          <li><a href="{{- _page.url | absolute_url -}}" id="{{- _slug -}}-link">
+          <li><a href="#" id="{{- _slug -}}-link">
             <span class="icon {{ _icon }}">job</span>
           </a></li>
 
-          <li><a href="{{- '/' | absolute_url -}}" id="broken-link"><span class="icon fa-unlink">[broken link]</span></a></li>
-        <!--{%- endif -%}
+          <li><a href="#" id="broken-link"><span class="icon fa-unlink">[broken link]</span></a></li>
+        {%- endif -%}
       {%- endfor -%}
     {%- endunless -%}
     {%- assign _sections = include.section_items | where_exp: "section", "section.hide != true" -%}
@@ -24,9 +24,9 @@
       {%- for _sect in _sections -%}
         {%- assign _title = _sect.title | default: _sect.layout | default: 'Untitled' -%}
         {%- assign _slug = _title | slugify -%}
-        {%- assign _icon = _sect.icon | default: 'fa-file' -%} -->
+        {%- assign _icon = _sect.icon | default: 'fa-file' -%}
         <li><a href="#{{- _slug -}}" id="{{- _slug -}}-link" class="scrolly"><span class="icon {{ _icon }}">evak</span></a></li>
-      <!--{%- endfor -%}
-    {%- endunless -%} -->
+      {%- endfor -%}
+    {%- endunless -%}
   </ul>
 </nav>
