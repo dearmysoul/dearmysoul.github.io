@@ -1,4 +1,4 @@
- {%- comment -%}
+{%- comment -%}
   Include vars:
 	title
   subtitle
@@ -14,7 +14,7 @@
 {%- if include.photo and include.photo-alt -%}
 	{%- capture _photo -%}
 		<img src="{{- include.photo | relative_url -}}" alt="{{- include.photo-alt -}}" class="back">
-{%- endcapture -%}
+	{%- endcapture -%}
 	{%- assign _class = 'shade-one cover dark' -%}
 {%- else -%}
 	{%- assign _photo = '' -%}
